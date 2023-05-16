@@ -3,3 +3,29 @@
         color: #635FC7 ;
     }
 }
+@media screen and (min-width:860px) {
+    mat-toolbar {
+        width: 20%;
+        height: 100%;
+        .board{
+            margin-left: 0;
+                align-items: center;
+                border: black solid 1px;
+                display: flex;
+                flex-direction: column;
+                 button {
+                        border: none;
+                        background-color: transparent;
+                    }
+
+                 ul {
+
+                li {
+                    list-style: none;
+                   
+                }
+            }
+           
+        }
+    }
+}
