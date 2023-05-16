@@ -1,0 +1,43 @@
+@media screen and (min-width: 850px) {
+  .header {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .left {
+      display: flex;
+      justify-content: space-between;
+      
+      .line {
+        border-left: 1px solid lightblue;
+        height: 90px;
+        position: absolute;
+        left: 13%;
+        margin-left: -3px;
+        top: 0;
+      }
+      .platformLaunch {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        font-weight: 800;
+      }
+    }
+    .right {
+      display: flex;
+      button {
+        border: none;
+        border-radius:20px;
+        padding:15px 13px;
+        background-color: #635FC7;
+        color: white;
+        font-weight: 800;
+        font-size: 1rem;
+        text-align: center;
+      }
+      .boardControl:after {
+        content: "\2807";
+        font-size: 30px;
+      }
+    }
+  }
+}
