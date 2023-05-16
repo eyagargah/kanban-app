@@ -9,6 +9,7 @@ import { BoardComponent } from './pages/board/board.component';
 import { TaskComponent } from './pages/task/task.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {MatToolbarModule} from '@angular/material/toolbar';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +22,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
