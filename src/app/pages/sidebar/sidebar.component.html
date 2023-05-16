@@ -1,5 +1,30 @@
-<div class="theme-control">
-    light
-    <mat-slide-toggle color="primary"></mat-slide-toggle>
-    dark
-</div>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <div class="logo">
+      <img src="../../../assets/images/logo-dark.svg" alt="logo" />
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="board">
+      <ul>
+        All Boards
+        <li><button>Platform lunch</button></li>
+        <li><button>Marketing Plan</button></li>
+        <li><button>Roadmap</button></li>
+      </ul>
+      <button>+Create New Board</button>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <div class="theme-control">
+      <img
+        src="../../../assets/images/icon-light-theme.svg"
+        alt="light theme"
+      />
+      <mat-slide-toggle color="primary"></mat-slide-toggle>
+      <img src="../../../assets/images/icon-dark-theme.svg" alt="dark theme" />
+    </div>
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+    <button>Hide toolbar</button>
+  </mat-toolbar-row>
+</mat-toolbar>
