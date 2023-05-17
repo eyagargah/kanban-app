@@ -1,31 +1,75 @@
-.theme-control {
-    mat-slide-toggle {
-        color: #635FC7 ;
+@media screen and (min-width: 850px) {
+  mat-sidenav {
+    width: 200px;
+    height: 92vh;
+  }
+  .top {
+    border: solid 1px lightblue;
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    button {
+      border: none;
+      background-color: transparent;
     }
-}
-@media screen and (min-width:860px) {
-    mat-toolbar {
-        width: 20%;
-        height: 100%;
-        .board{
-            margin-left: 0;
-                align-items: center;
-                border: black solid 1px;
-                display: flex;
-                flex-direction: column;
-                 button {
-                        border: none;
-                        background-color: transparent;
-                    }
-
-                 ul {
-
-                li {
-                    list-style: none;
-                   
-                }
-            }
-           
+    .left {
+      display: flex;
+      width: 20%;
+      h1 {
+        font-weight: 800;
+      }
+      .line {
+        border-left: 1px solid lightblue;
+        height: 90px;
+        position: absolute;
+        left: 13%;
+        margin-left: -3px;
+        top: 0;
+      }
+    }
+    .right {
+      mat-toolbar-row {
+        .newTask {
+          border: none;
+          border-radius: 20px;
+          padding: 0.7rem;
+          background-color: #635fc7;
+          color: white;
+          font-weight: 800;
+          font-size: 1rem;
+          text-align: center;
+          margin: 1rem;
         }
+      }
+
+      .test:after {
+        content: "\2807";
+        font-size: 30px;
+        color: gray;
+      }
     }
+  }
+
+  .toggleSidenav {
+    background-color: #635fc7;
+    width: 60px;
+    height: 45px;
+    margin: 0;
+    padding-left: 0;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    button {
+      align-items: center;
+      border: none;
+      margin-left: 0;
+      padding-left: 0;
+      img {
+        align-self: center;
+        margin-left: 15px;
+        margin-bottom: 20%;
+        height: 50%;
+      }
+    }
+  }
 }
