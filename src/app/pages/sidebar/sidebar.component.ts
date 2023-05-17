@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+  itoogle : boolean = false
+  toggleMenu(){
+    console.log('clicked')
+    this.itoogle = !this.itoogle
+  }
 }
