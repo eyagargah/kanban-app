@@ -1,6 +1,6 @@
 @media screen and (min-width: 850px) {
   .header {
-    padding: 1.5rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,12 +13,12 @@
         height: 90px;
         position: absolute;
         left: 13%;
-        margin-left: -3px;
+        margin-left: 0.5rem;
         top: 0;
       }
       .platformLaunch {
         font-size: 1.5rem;
-        margin-left: 1rem;
+        margin-left: 3rem;
         font-weight: 800;
       }
     }
@@ -33,10 +33,14 @@
         font-weight: 800;
         font-size: 1rem;
         text-align: center;
+        
       }
       .boardControl:after {
+        color: gray;
+        margin-left: 15px;
         content: "\2807";
         font-size: 30px;
+        align-self: baseline;
       }
     }
   }
