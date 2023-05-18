@@ -1,38 +1,59 @@
 <mat-toolbar class="top">
-  <div class="left">
-    <mat-toolbar-row>
-      <img src="../../../assets/images/logo-dark.svg" alt="">
-    </mat-toolbar-row>
-    <div class="line"></div>
-    <mat-toolbar-row>
-      <button mat-icon-button (click)="sidenav.toggle()">
-        <h1>Platform Launch</h1>
-      </button>
-    </mat-toolbar-row>
-  </div>
- <div class="right">
-  <mat-toolbar-row>
-    <button class="newTask">+ Add new task</button>
-    <button class="test"></button>
+  <mat-toolbar-row class="logo">
+    <img src="../../../assets/images/logo-dark.svg" alt="" />
   </mat-toolbar-row>
- </div>
- 
+  <mat-toolbar-row class="line"> </mat-toolbar-row>
+  <mat-toolbar-row class="currentBoard">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <h1>Platform Launch</h1>
+    </button>
+  </mat-toolbar-row>
+  <mat-toolbar-row class="right">
+    <button class="newTask">+ Add new task</button>
+    <div class="dropdownMenu">
+      <div class="test" (click)="dropDownMenu()"></div>
+      <ul>
+        <div class="dropdownContent hide">
+          <li class="edit">Edit Board</li>
+          <li class="delete">Delete Board</li>
+        </div>
+      </ul>
+    </div>
+  </mat-toolbar-row>
 </mat-toolbar>
 <mat-sidenav-container>
-  <mat-sidenav #sidenav>
+  <mat-sidenav style="height: 100%" #sidenav [fixedInViewport]="true">
     <mat-nav-list>
-      <a mat-list-item>home</a>
-      <a mat-list-item>home</a>
-      <a mat-list-item>home</a>
-      <a mat-list-item>home</a>
+      <img src="../../../assets/images/logo-dark.svg" alt="" srcset="" />
+      <div class="boards">
+        <h4>All Boards (3)</h4>
+        <a mat-list-item>
+          <img src="../../../assets/images/icon-board.svg" alt="" />
+
+          Platfrom launch
+        </a>
+        <a mat-list-item>
+          <img src="../../../assets/images/icon-board.svg" alt="" />
+          Marketing plan</a
+        >
+        <a mat-list-item>
+          <img src="../../../assets/images/icon-board.svg" alt="" />
+          Roadmap</a
+        >
+        <a mat-list-item class="newTask">
+          <img src="../../../assets/images/icon-board.svg" alt="" />
+          +Create new Board</a
+        >
+      </div>
+      <div class="themeSwitch">
+        <img src="../../../assets/images/icon-light-theme.svg" alt="">
+        <mat-slide-toggle color="primary"></mat-slide-toggle>
+        <img src="../../../assets/images/icon-dark-theme.svg" alt="">
+      </div>
+      <button (click)="sidenav.toggle()">Hide sidebar</button>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content opened="true" mode="sidenav">
-    <div style="height:82vh; color:bleu; width:80vw;"></div>
+  <mat-sidenav-content>
+    <div style="height: 89vh; color: bleu; width: 100%"></div>
   </mat-sidenav-content>
 </mat-sidenav-container>
-<mat-toolbar  class="toggleSidenav">
-    <button mat-icon-button (click)="sidenav.toggle()">
-      <img src="../../../assets/images/icon-show-sidebar.svg" alt="show sidebar">
-    </button>
-</mat-toolbar>
