@@ -4,14 +4,14 @@
   </mat-toolbar-row>
   <mat-toolbar-row class="line"> </mat-toolbar-row>
   <mat-toolbar-row class="currentBoard">
-    <button mat-icon-button (click)="sidenav.toggle()">
+    <button mat-icon-button (click)="showSideBar()" (click)="sidenav.toggle()">
       <h1>Platform Launch</h1>
     </button>
   </mat-toolbar-row>
   <mat-toolbar-row class="right">
     <button class="newTask">+ Add new task</button>
     <div class="dropdownMenu">
-      <div class="test" (click)="dropDownMenu()"></div>
+      <div class="test"  (click)="dropDownMenu()"></div>
       <ul>
         <div class="dropdownContent hide">
           <li class="edit">Edit Board</li>
@@ -50,7 +50,7 @@
         <mat-slide-toggle color="primary"></mat-slide-toggle>
         <img src="../../../assets/images/icon-dark-theme.svg" alt="">
       </div>
-      <button (click)="sidenav.toggle()">
+      <button class="hideSidebar" (click)="hideSideNav( )"(click)="sidenav.toggle()">
         <img src="../../../assets/images/icon-hide-sidebar.svg" alt="">
         Hide sidebar</button>
     </mat-nav-list>
@@ -59,3 +59,6 @@
     <div style="height: 89vh; color: bleu; width: 100%"></div>
   </mat-sidenav-content>
 </mat-sidenav-container>
+<button class="showSidebar show" (click)="showSideBar()" (click)="sidenav.toggle()">
+  <img src="../../../assets/images/icon-show-sidebar.svg" alt="">
+</button>
