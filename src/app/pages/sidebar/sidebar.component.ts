@@ -1,4 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,24 +7,29 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent {
- 
-  itoogle: boolean = false;
-  toggleMenu() {
-    alert('clicked')
-    this.itoogle = !this.itoogle;
-    
-  }
+  dropDownMenu() {
+    const dropdownMenu = document.querySelector('.dropdownContent');
 
-
-  dropDownMenu(){
-    const dropdownMenu = document.querySelector('.dropdownContent')
-
-    if(dropdownMenu?.classList.contains('hide')){
-      dropdownMenu.classList.remove('hide')
-    }else {
-      dropdownMenu?.classList.add('hide')
+    if (dropdownMenu?.classList.contains('hide')) {
+      dropdownMenu.classList.remove('hide');
+    } else {
+      dropdownMenu?.classList.add('hide');
     }
-  
   }
- 
+
+  showSideBar() {
+    const showSidebar = document.querySelector('.showSidebar');
+    if (showSidebar?.classList.contains('show')) {
+      showSidebar.classList.remove('show');
+      showSidebar.classList.add('hide');
+    }
+  }
+  hideSideNav() {
+    const showSidebar = document.querySelector('.showSidebar');
+
+    if (showSidebar?.classList.contains('hide')) {
+      showSidebar.classList.remove('hide');
+      showSidebar.classList.add('show');
+    }
+  }
 }
