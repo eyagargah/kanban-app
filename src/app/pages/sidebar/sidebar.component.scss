@@ -27,7 +27,7 @@
         align-items: center;
         border-radius: 5px;
         padding: 1rem 2rem;
-        background-color: #a9a8c0;
+        background-color: #F4F7FD;
           margin: 17rem 2rem 0 2rem;
           mat-slide-toggle {
             margin: 0;
@@ -60,8 +60,9 @@
 
     .logo {
       width: 40%;
-      margin-right: 0;
-      margin-left: 1rem;
+      img {
+        margin-left: 1rem;
+      }
     }
     .line {
       border-left: 1px solid rgb(231, 236, 238);
@@ -76,6 +77,7 @@
       }
     }
     .right {
+      cursor: pointer;
       margin-left: 60.5rem;
       .newTask {
         border: none;
@@ -87,6 +89,9 @@
         font-size: 1rem;
         text-align: center;
         margin: 1rem;
+      }
+      .newTask:hover {
+        background-color: #A8A4FF;
       }
       .dropdownMenu {
         .test:after {
@@ -124,11 +129,14 @@
   
   }
 
-  .toggleMenu {
+  .showSidebar {
+    cursor: pointer;
     position: absolute;
+    bottom: 2rem;
     left: -25px;
     background-color: #635fc7;
-    border-radius: 40%;
+    border-radius: 30px;
+    border: none;
     width: 90px;
     height: 45px;
     padding: 1rem;
@@ -137,14 +145,19 @@
       align-self: center;
       margin-left: 15px;
       margin-bottom: 20%;
-      height: 50%;
+      height: 100%;
     }
+  }
+  .showSidebar:hover {
+    background-color: #A8A4FF;
   }
   .hide {
     display: none;
+    z-index: -111;
   }
   .show {
     display: block;
+    z-index: 1111;
   }
   
 }
