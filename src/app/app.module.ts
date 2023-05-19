@@ -14,13 +14,16 @@ import {MatSidenavModule } from '@angular/material/sidenav';
 import {MatIconModule } from '@angular/material/icon';
 import {MatListModule } from '@angular/material/list';
 import {MatButtonModule } from '@angular/material/button';
+import { TaskModalComponent } from './pages/task-modal/task-modal.component';
+import {MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     SidebarComponent,
     BoardComponent,
-    TaskComponent
+    TaskComponent,
+    TaskModalComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +34,8 @@ import {MatButtonModule } from '@angular/material/button';
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
