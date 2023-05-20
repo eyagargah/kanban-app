@@ -16,6 +16,7 @@ import {MatListModule } from '@angular/material/list';
 import {MatButtonModule } from '@angular/material/button';
 import { TaskModalComponent } from './pages/task-modal/task-modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { BoardModalComponent } from './pages/board-modal/board-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +24,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     SidebarComponent,
     BoardComponent,
     TaskComponent,
-    TaskModalComponent
+    TaskModalComponent,
+    BoardModalComponent
   ],
   imports: [
     BrowserModule,
