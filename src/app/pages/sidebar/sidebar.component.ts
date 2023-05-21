@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { TaskComponent } from '../task/task.component';
 import { addTaskModal } from '../add-task-modal/add-task-modal.component';
 @Component({
   selector: 'app-sidebar',
@@ -9,7 +8,7 @@ import { addTaskModal } from '../add-task-modal/add-task-modal.component';
 })
 export class SidebarComponent {
   sideNavOpened : boolean | undefined 
-  fileNameDialogRef: MatDialogRef<TaskComponent> | undefined;
+  fileNameDialogRef: MatDialogRef<addTaskModal> | undefined;
 
   constructor(private dialog: MatDialog) {}
 
