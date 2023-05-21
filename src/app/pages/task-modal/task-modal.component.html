@@ -6,7 +6,7 @@
     </div>
     <div class="description">
         <label for="description">Description</label>
-        <input type="text" name="description" id="description" placeholder="e.g. It's always good to take a break. This 15 minute break will recharge the batteries a little.">
+        <textarea name="description" id="description" cols="30" rows="7"></textarea>
     </div>
     <div class="subtasks">
         <ul>
@@ -19,10 +19,17 @@
                 <input type="text" name="subtasks" id="subtasks" placeholder="e.g. make coffee">
                 <img src="../../../assets/images/icon-cross.svg" alt="">
             </li>
-            <button>+ Add new Subtask</button>
+            <button class="newSubtask">+ Add new Subtask</button>
         </ul>
        
     </div>
-    <div class="status"></div>
-    <button>Create Task</button>
+    <div class="status">
+        <label for="status">Status</label>
+        <select name="status" id="status">
+            <option value="todo">Todo</option>
+            <option value="doing">Doing</option>
+            <option value="done">done</option>
+        </select>
+    </div>
+    <button class="submit">Create Task</button>
 </div>
