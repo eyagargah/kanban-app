@@ -1,0 +1,35 @@
+<div class="taskModal">
+    <h2>Add New Task</h2>
+    <div class="title">
+        <label for="title">Title</label>
+        <input type="text" name="title" id="title" placeholder="e.g. Take coffee break">
+    </div>
+    <div class="description">
+        <label for="description">Description</label>
+        <textarea name="description" id="description" cols="30" rows="7"></textarea>
+    </div>
+    <div class="subtasks">
+        <ul>
+            <label for="title">subtasks</label>
+            <li>
+                <input type="text" name="subtasks" id="subtasks" placeholder="e.g. make coffee">
+                <img src="../../../assets/images/icon-cross.svg" alt="">
+            </li>
+            <li>
+                <input type="text" name="subtasks" id="subtasks" placeholder="e.g. make coffee">
+                <img src="../../../assets/images/icon-cross.svg" alt="">
+            </li>
+            <button class="newSubtask">+ Add new Subtask</button>
+        </ul>
+       
+    </div>
+    <div class="status">
+        <label for="status">Status</label>
+        <select name="status" id="status">
+            <option value="todo">Todo</option>
+            <option value="doing">Doing</option>
+            <option value="done">done</option>
+        </select>
+    </div>
+    <button class="submit">Create Task</button>
+</div>
