@@ -14,9 +14,12 @@ import {MatSidenavModule } from '@angular/material/sidenav';
 import {MatIconModule } from '@angular/material/icon';
 import {MatListModule } from '@angular/material/list';
 import {MatButtonModule } from '@angular/material/button';
-import { TaskModalComponent } from './pages/task-modal/task-modal.component';
+import { addTaskModal } from './pages/add-task-modal/add-task-modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BoardModalComponent } from './pages/board-modal/board-modal.component';
+import { EditBoardModalComponent } from './pages/edit-board-modal/edit-board-modal.component';
+import { DeleteBoardModalComponent } from './pages/delete-board-modal/delete-board-modal.component';
+import { ViewtaskModalComponent } from './pages/viewtask-modal/viewtask-modal.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,8 +27,11 @@ import { BoardModalComponent } from './pages/board-modal/board-modal.component';
     SidebarComponent,
     BoardComponent,
     TaskComponent,
-    TaskModalComponent,
-    BoardModalComponent
+    addTaskModal,
+    BoardModalComponent,
+    EditBoardModalComponent,
+    DeleteBoardModalComponent,
+    ViewtaskModalComponent
   ],
   imports: [
     BrowserModule,
