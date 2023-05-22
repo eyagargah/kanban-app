@@ -41,9 +41,14 @@
       </button>
     </mat-nav-list>
   </mat-sidenav>
+
   <mat-sidenav-content>
     <mat-toolbar class="top">
-      <mat-toolbar-row class="line"> </mat-toolbar-row>
+
+      <mat-toolbar-row *ngIf="!sidenav.opened" class="logo ">
+        <img src="../../../assets/images/logo-dark.svg" alt="" />
+      </mat-toolbar-row>
+      <mat-toolbar-row class="line" *ngIf="!sidenav.opened"> </mat-toolbar-row>
       <mat-toolbar-row class="currentBoard">
         <button
           mat-icon-button
@@ -61,8 +66,8 @@
           <div class="test" (click)="dropDownMenu()"></div>
           <ul>
             <div class="dropdownContent hide">
-              <li class="edit">Edit Board</li>
-              <li class="delete">Delete Board</li>
+              <li class="edit" (click)=" editBoard()">Edit Board</li>
+              <li class="delete" (click)="deleteBoard()">Delete Board</li>
             </div>
           </ul>
         </div>
