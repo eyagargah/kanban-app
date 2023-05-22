@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
-import { addTaskModal } from '../add-task-modal/add-task-modal.component';
+import { addTaskModalComponent } from '../add-task-modal/add-task-modal.component';
 import { EditBoardModalComponent } from '../edit-board-modal/edit-board-modal.component';
 import { DeleteBoardModalComponent } from '../delete-board-modal/delete-board-modal.component';
+import { BoardModalComponent } from '../board-modal/board-modal.component';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -10,7 +11,8 @@ import { DeleteBoardModalComponent } from '../delete-board-modal/delete-board-mo
 })
 export class SidebarComponent {
   sideNavOpened : boolean | undefined 
-  addTaskModalDialogRef: MatDialogRef<addTaskModal> | undefined;
+  addTaskModalDialogRef: MatDialogRef<addTaskModalComponent> | undefined;
+  addBoardModalDialogRef: MatDialogRef<BoardModalComponent> | undefined;
   deleteBoardDialogRef :MatDialogRef<DeleteBoardModalComponent> | undefined
   EditDialogRef: MatDialogRef<EditBoardModalComponent> | undefined;
 
@@ -44,9 +46,13 @@ export class SidebarComponent {
   }
 
   openTaskModal() {
-    this.addTaskModalDialogRef = this.dialog.open(addTaskModal);
+    this.addTaskModalDialogRef = this.dialog.open(addTaskModalComponent);
   }
 
+   
+  addNewBoard(){
+    this.addBoardModalDialogRef = this.dialog.open(BoardModalComponent)
+  }
   editBoard(){
     this.EditDialogRef = this.dialog.open(EditBoardModalComponent);
   }
