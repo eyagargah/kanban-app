@@ -1,6 +1,5 @@
 @media screen and (min-width: 850px) {
   mat-sidenav {
-   
     width: 300px;
     height: 92vh;
     mat-nav-list {
@@ -14,32 +13,30 @@
         h4 {
           margin-left: 2rem;
         }
-        mat-list-item{
+        mat-list-item {
           margin: 0;
           img {
             margin: 0;
           }
         }
-       
       }
-       .themeSwitch {
+      .themeSwitch {
         display: flex;
         justify-content: space-around;
         align-items: center;
         border-radius: 5px;
         padding: 1rem 2rem;
-        background-color: #F4F7FD;
-          margin: 17rem 2rem 0 2rem;
-          mat-slide-toggle {
-            margin: 0;
-            color: primary;
-            
-          }
-          img {
-              margin: 0 ;
-            }
+        background-color: #f4f7fd;
+        margin: 17rem 2rem 0 2rem;
+        mat-slide-toggle {
+          margin: 0;
+          color: primary;
         }
-        button {
+        img {
+          margin: 0;
+        }
+      }
+      button {
         border: none;
         border-radius: 20px;
         padding: 0.7rem;
@@ -49,37 +46,41 @@
         text-align: center;
         background-color: transparent;
         margin-top: 1rem;
-        }
+      }
     }
   }
   .top {
-    border: solid 1px rgb(231, 236, 238);
-    background-color: white;
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
-    flex-grow: 0;
+    align-items: center;
+    justify-content: space-between;
+    border: solid 1px rgb(231, 236, 238);
+    background-color: white;
+
     .logo {
-      width: 40%;
+      width: 9rem;
+      align-items: baseline;
       img {
-        margin-left: 1rem;
+        margin-top: 0.8rem;
       }
     }
     .line {
+      margin-left: 3rem;
+      padding: 0;
       border-left: 1px solid rgb(231, 236, 238);
-      height: 80px;
+      height: 70px;
       width: 5px;
     }
     .currentBoard {
-      margin-left: 0;
-      padding-left: 0;
+      align-items: baseline;
       h1 {
         font-weight: 700;
       }
     }
+
     .right {
+      width: 20%;
       cursor: pointer;
-      margin-left: 60.5rem;
       .newTask {
         border: none;
         border-radius: 20px;
@@ -92,7 +93,7 @@
         margin: 1rem;
       }
       .newTask:hover {
-        background-color: #A8A4FF;
+        background-color: #a8a4ff;
       }
       .dropdownMenu {
         .test:after {
@@ -105,7 +106,6 @@
             list-style: none;
             color: gray;
             font-size: 0.9rem;
-           
           }
           .dropdownContent {
             background-color: rgb(241, 246, 248);
@@ -121,13 +121,11 @@
           }
         }
       }
-     
     }
     button {
       border: none;
       background-color: transparent;
     }
-  
   }
 
   .showSidebar {
@@ -150,7 +148,7 @@
     }
   }
   .showSidebar:hover {
-    background-color: #A8A4FF;
+    background-color: #a8a4ff;
   }
   .hide {
     display: none;
@@ -160,5 +158,4 @@
     display: block;
     z-index: 1111;
   }
-  
 }
