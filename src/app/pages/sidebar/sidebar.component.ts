@@ -28,7 +28,6 @@ export class SidebarComponent {
 
   showSideBar() {
     const showSidebar = document.querySelector('.showSidebar');
-    const logo = document.querySelector('.logo')
     if (showSidebar?.classList.contains('show')) {
       showSidebar.classList.remove('show');
       showSidebar.classList.add('hide');
@@ -37,10 +36,7 @@ export class SidebarComponent {
   }
   hideSideNav() {
     const showSidebar = document.querySelector('.showSidebar');
-    const logo = document.querySelector('.logo')
     if (showSidebar?.classList.contains('hide')) {
-      logo?.classList.add('show')
-      logo?.classList.remove('hide');
       showSidebar.classList.remove('hide');
       showSidebar.classList.add('show');
       this.sideNavOpened = false
