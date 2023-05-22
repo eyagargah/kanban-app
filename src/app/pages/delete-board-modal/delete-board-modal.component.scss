@@ -1,16 +1,40 @@
 .deleteBoard {
-  padding: 1rem;
+  padding: 2rem;
   height: 25vh;
   width: 30vw;
   h2 {
     color: #ea5555;
   }
-  button {
-    width: 40%;
-    border: none;
-    border-radius: 30px;
-    align-self: center;
-    padding: 1rem;
-    font-weight: 700;
+  p {
+    color: #828FA3;
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5rem;
   }
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    button {
+        cursor: pointer;
+        width: 45%;
+        border: none;
+        border-radius: 30px;
+        align-self: center;
+        padding: 1rem;
+        font-weight: 700;
+      }
+      .delete {
+        background-color: #ea5555;
+        color: white;
+      }
+      .delete:hover {
+        background-color: #FF9898;
+      }
+      .cancel {
+        background-color: #F4F7FD;
+        color:#635FC7 ;
+        
+      }
+  }
+
 }
