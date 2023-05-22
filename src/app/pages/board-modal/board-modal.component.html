@@ -1,1 +1,24 @@
-<p>board-modal works!</p>
+<div class="newBoard">
+    <h2>Add New Board</h2>
+    <form >
+        <div class="name">
+            <label for="name">Board Name</label>
+            <input type="text" placeholder="e.g Web Design">
+        </div>
+        <div class="boardColumns">
+            <h3>Board columns</h3>
+            <ul>
+                <li>
+                    <input type="text" name="subtasks" id="subtasks" placeholder="e.g Todo">
+                    <img src="../../../assets/images/icon-cross.svg" alt="">
+                </li>
+                <li>
+                    <input type="text" name="subtasks" id="subtasks" placeholder="e.g Doing">
+                    <img src="../../../assets/images/icon-cross.svg" alt="">
+                </li>
+            </ul>
+        </div>
+        <button class="newColumn">+ Add new Column</button>
+        <button class="saveChanges">Creat New Board</button>
+    </form>
+</div>
