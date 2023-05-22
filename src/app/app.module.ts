@@ -14,7 +14,7 @@ import {MatSidenavModule } from '@angular/material/sidenav';
 import {MatIconModule } from '@angular/material/icon';
 import {MatListModule } from '@angular/material/list';
 import {MatButtonModule } from '@angular/material/button';
-import { addTaskModal } from './pages/add-task-modal/add-task-modal.component';
+import { addTaskModalComponent } from './pages/add-task-modal/add-task-modal.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { BoardModalComponent } from './pages/board-modal/board-modal.component';
 import { EditBoardModalComponent } from './pages/edit-board-modal/edit-board-modal.component';
@@ -27,7 +27,7 @@ import { ViewtaskModalComponent } from './pages/viewtask-modal/viewtask-modal.co
     SidebarComponent,
     BoardComponent,
     TaskComponent,
-    addTaskModal,
+    addTaskModalComponent,
     BoardModalComponent,
     EditBoardModalComponent,
     DeleteBoardModalComponent,
