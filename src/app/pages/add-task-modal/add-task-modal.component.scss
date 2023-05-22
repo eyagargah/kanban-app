@@ -54,6 +54,7 @@
    }
 
    button {
+    cursor: pointer;
     width: 100%;
     border: none;
     border-radius: 30px;
@@ -73,8 +74,16 @@
         border-radius: 5px;
     }
    }
+
    .submit {
     background-color: #635FC7;
     color: white;
    }
+   .newSubtask:hover {
+    background-color: #E4EBFA;
+  }
+  
+  .submit:hover {
+    background-color: #A8A4FF;
+  }
 }
