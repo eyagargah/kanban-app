@@ -5,6 +5,6 @@ import { Component } from '@angular/core';
   templateUrl: './add-task-modal.component.html',
   styleUrls: ['./add-task-modal.component.scss']
 })
-export class addTaskModal {
+export class addTaskModalComponent {
 
 }
