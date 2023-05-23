@@ -1,45 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap');
 
-// SCSS VARIABLES//
-$black: #000112;
-$veryDarkGrey: #20212C;
-$darkGrey: #2B2C37;
-$darkLines: #3E3F4E;
-$mediumGrey: #828FA3;
-$lightLines: #E4EBFA;
-$lightGrey: #F4F7FD;
-$white: #FFFFFF;
-$mainPurple: #635FC7;
-$mainPurpleHover: #A8A4FF;
-$red: #EA5555;
-$redHover: #FF9898;
-
-:root{
-  --color-bg: #20212C;
-  --color-sec-bg: #2B2C37;
-  --color-text: #FFFFFF;
-  --label-text-color: #FFFFFF;
-  --secondary-button-color: #FFFFFF;
-  --secondary-button-color-hover: #FFFFFF;
-  --checkbox-bg: #20212C;
-  --checkbox-color: #2B2C37;
-  --lines: #3E3F4E;
-  --sidebar-btn-hover: #FFFFFF;
-  --new-column-bg: linear-gradient(180deg, rgba(43, 44, 55, 0.25) 0%, rgba(43, 44, 55, 0.125) 100%);
-}
-[data-theme = 'light'] {
-  --color-bg: #F4F7FD;
-  --color-sec-bg: #FFFFFF;
-  --color-text: #000112;
-  --label-text-color: #828FA3;
-  --secondary-button-color: #F4F7FD;
-  --secondary-button-color-hover: #E4EBFA;
-  --checkbox-bg: #F4F7FD;
-  --checkbox-color: #FFFFFF;
-  --lines: #E4EBFA;
-  --sidebar-btn-hover: #F4F7FD;
-  --new-column-bg: linear-gradient(180deg, #E9EFFA 0%, rgba(233, 239, 250, 0.5) 100%);
-}
 
 * {
   font-family: 'Plus Jakarta Sans', sans-serif;
