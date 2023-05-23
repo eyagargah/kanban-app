@@ -4,19 +4,20 @@ import { addTaskModalComponent } from '../add-task-modal/add-task-modal.componen
 import { EditBoardModalComponent } from '../edit-board-modal/edit-board-modal.component';
 import { DeleteBoardModalComponent } from '../delete-board-modal/delete-board-modal.component';
 import { BoardModalComponent } from '../board-modal/board-modal.component';
+import { ColorThemeService } from 'src/app/services/color-theme.service';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent {
-  sideNavOpened : boolean | undefined 
+  darkModeOn : boolean = false
   addTaskModalDialogRef: MatDialogRef<addTaskModalComponent> | undefined;
   addBoardModalDialogRef: MatDialogRef<BoardModalComponent> | undefined;
-  deleteBoardDialogRef :MatDialogRef<DeleteBoardModalComponent> | undefined
+  deleteBoardDialogRef: MatDialogRef<DeleteBoardModalComponent> | undefined;
   EditDialogRef: MatDialogRef<EditBoardModalComponent> | undefined;
 
-  constructor(private dialog: MatDialog) {}
+  constructor(private dialog: MatDialog, public colorTheme: ColorThemeService ) {}
 
   dropDownMenu() {
     const dropdownMenu = document.querySelector('.dropdownContent');
@@ -33,7 +34,6 @@ export class SidebarComponent {
     if (showSidebar?.classList.contains('show')) {
       showSidebar.classList.remove('show');
       showSidebar.classList.add('hide');
-      this.sideNavOpened = true
     }
   }
   hideSideNav() {
@@ -41,7 +41,6 @@ export class SidebarComponent {
     if (showSidebar?.classList.contains('hide')) {
       showSidebar.classList.remove('hide');
       showSidebar.classList.add('show');
-      this.sideNavOpened = false
     }
   }
 
@@ -49,16 +48,15 @@ export class SidebarComponent {
     this.addTaskModalDialogRef = this.dialog.open(addTaskModalComponent);
   }
 
-   
-  addNewBoard(){
-    this.addBoardModalDialogRef = this.dialog.open(BoardModalComponent)
+  addNewBoard() {
+    this.addBoardModalDialogRef = this.dialog.open(BoardModalComponent);
   }
-  editBoard(){
+  editBoard() {
     this.EditDialogRef = this.dialog.open(EditBoardModalComponent);
   }
 
-  
-  deleteBoard(){
-    this.deleteBoardDialogRef = this.dialog.open(DeleteBoardModalComponent)
+  deleteBoard() {
+    this.deleteBoardDialogRef = this.dialog.open(DeleteBoardModalComponent);
   }
+ 
 }
