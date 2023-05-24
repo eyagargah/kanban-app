@@ -6,7 +6,8 @@
     [fixedInViewport]="true"
   >
     <mat-nav-list>
-      <img src="../../../assets/images/logo-dark.svg" alt="" srcset="" />
+      <img *ngIf="!colorTheme.darkMode" src="../../../assets/images/logo-dark.svg" alt="logo">
+      <img *ngIf="colorTheme.darkMode" src="../../../assets/images/logo-light.svg" alt="logo">
       <div class="boards">
         <h4>All Boards (3)</h4>
         <a mat-list-item>
@@ -65,8 +66,8 @@
   <mat-sidenav-content>
     <mat-toolbar class="top">
       <mat-toolbar-row *ngIf="!sidenav.opened" class="logo">
-        <img *ngIf="!colorTheme.darkMode" src="../../../assets/images/logo-light.svg" alt="logo">
-        <img *ngIf="colorTheme.darkMode" src="../../../assets/logo-dark.svg" alt="logo">
+        <img *ngIf="!colorTheme.darkMode" src="../../../assets/images/logo-dark.svg" alt="logo">
+        <img *ngIf="colorTheme.darkMode" src="../../../assets/images/logo-light.svg" alt="logo">
       </mat-toolbar-row>
       <mat-toolbar-row class="line" *ngIf="!sidenav.opened"> </mat-toolbar-row>
       <mat-toolbar-row class="currentBoard">
