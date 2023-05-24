@@ -5,20 +5,27 @@ import { EditBoardModalComponent } from '../edit-board-modal/edit-board-modal.co
 import { DeleteBoardModalComponent } from '../delete-board-modal/delete-board-modal.component';
 import { BoardModalComponent } from '../board-modal/board-modal.component';
 import { ColorThemeService } from 'src/app/services/color-theme.service';
+import { BoardService } from 'src/app/services/board.service';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.scss'],
 })
 export class SidebarComponent {
+  currentBoard = ''
   darkModeOn : boolean = false
   addTaskModalDialogRef: MatDialogRef<addTaskModalComponent> | undefined;
   addBoardModalDialogRef: MatDialogRef<BoardModalComponent> | undefined;
   deleteBoardDialogRef: MatDialogRef<DeleteBoardModalComponent> | undefined;
   EditDialogRef: MatDialogRef<EditBoardModalComponent> | undefined;
 
-  constructor(private dialog: MatDialog, public colorTheme: ColorThemeService ) {}
+  constructor(private dialog: MatDialog, public colorTheme: ColorThemeService , private boardsService : BoardService ) {}
 
+  ngOnInit(){
+  }
+  getCurrentBoard(e:any){
+    console.log(e.target)
+  }
   dropDownMenu() {
     const dropdownMenu = document.querySelector('.dropdownContent');
 
