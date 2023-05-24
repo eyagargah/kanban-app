@@ -1,42 +1,14 @@
 .board {
+  padding-top: 1rem;
   width: 100%;
   height: 90vh;
   background-color: #f4f7fd;
   z-index: 1;
   display: flex;
-  .column {
-    ul {
-      padding: 0.5rem;
-      h3 {
-        color: #828fa3;
-        font-weight: 500;
-      }
-      li {
-        list-style: none;
-        width: 17vw;
-        margin-bottom: 1rem;
-        .task {
-          padding: 0.5rem;
-          background-color: white;
-          border-radius: 10px;
-          .taskContent {
-            color: black;
-            font-weight: 500;
-            margin-bottom: 5px;
-          }
-          .subtasks {
-            color: #828fa3;
-            font-weight: 500;
-            font-size: 0.8rem;
-          }
-        }
-      }
-    }
-  }
 
   button {
     margin-left: 1rem;
-    margin-top: 2.7rem;
+    margin-top: 1.8rem;
     border: none;
     width: 20vw;
     height: 75vh;
