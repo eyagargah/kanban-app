@@ -1,4 +1,4 @@
-{
+[{
   "boards": [
     {
       "name": "Platform Launch",
@@ -427,4 +427,4 @@
       ]
     }
   ]
-}
+}]
