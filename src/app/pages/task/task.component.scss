@@ -1,0 +1,16 @@
+.task {
+    .card {
+        cursor: pointer;
+        background-color: white;
+        border-radius: 10px;
+        padding: 0.5rem;
+        width: 17rem;
+        height: 4rem;
+        .taskContent {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0;
+        }
+    }
+
+}
