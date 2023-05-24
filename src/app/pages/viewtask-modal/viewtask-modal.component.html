@@ -1,1 +1,27 @@
-<p>viewtask-modal works!</p>
+<div class="taskModal">
+    <div class="header">
+        <h4>title</h4>
+        <div class="dropDownMenu">
+            <svg width="5" height="20" xmlns="http://www.w3.org/2000/svg"><g fill="#828FA3" fill-rule="evenodd"><circle cx="2.308" cy="2.308" r="2.308"/><circle cx="2.308" cy="10" r="2.308"/><circle cx="2.308" cy="17.692" r="2.308"/></g></svg>
+        </div>
+    </div>
+    <div class="subtasks">
+        <h5>Subtasks (2 of 3)</h5>
+        <div class="subtaskList">
+            <ul>
+                <li>
+                    <input type="checkbox" name="subtask" id="subtask">
+                    <app-subtask class="subtask"></app-subtask>
+                </li>
+            </ul>
+        </div>
+        <div class="status">
+            <label for="currentStatus">Current Status</label>
+            <select name="status" id="status">
+                <option value="doing">Doing</option>
+                <option value="doing">Todo</option>
+                <option value="doing">Done</option>
+            </select>
+        </div>
+    </div>
+</div>
