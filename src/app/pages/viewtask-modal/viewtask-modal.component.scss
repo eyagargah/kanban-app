@@ -1,0 +1,56 @@
+.taskModal {
+    width: 400px;
+    height: 300px;
+    padding: 2rem;
+    border-radius: 5px;
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+
+ 
+   .subtasks {
+    align-items: start;
+    ul {
+        padding-left: 0;
+        li {
+            padding: 0 0.6rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            list-style: none;
+            align-items: baseline;
+            border-radius: 5px;
+            background-color: #E4EBFA;
+            input {
+                align-self: baseline;
+            }
+            cursor: pointer;
+            .subtask {
+                margin: 0.5rem 0.5rem 0 0;
+                align-self: baseline;
+                padding-bottom: 0;
+            }
+           
+        }
+        li:hover{
+            background-color:#A8A4FF  ;
+        }
+    }
+   }
+
+   .status {
+    margin-top: 1rem;
+    label {
+        font-weight: 600;
+    }
+    select {
+        width: 100%;
+        padding: 0.5rem 20rem 0.5rem 0;
+        border: solid 1px #E4EBFA;
+        border-radius: 5px;
+    }
+   }
+}
