@@ -51,6 +51,7 @@ import { SubtaskComponent } from './pages/subtask/subtask.component';
     MatDialogModule,
     FormsModule,
     ReactiveFormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
