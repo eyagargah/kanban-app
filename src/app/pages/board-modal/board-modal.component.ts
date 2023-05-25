@@ -10,6 +10,7 @@ export class BoardModalComponent {
   public boardForm: FormGroup;
   constructor(private _fb: FormBuilder) {
     this.boardForm = this._fb.group({
+      name: ['', Validators.required],
       columns: this._fb.array([this.addColumnGroup()])
     });
   }
