@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { BoardService } from 'src/app/services/board.service';
 
 @Component({
   selector: 'app-board-modal',
@@ -7,8 +8,13 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./board-modal.component.scss'],
 })
 export class BoardModalComponent {
+  boards :any
   public boardForm: FormGroup;
-  constructor(private _fb: FormBuilder) {
+  ngOnInit(){
+    this.boards = JSON.parse(localStorage['boards']);
+    console.log(this.boards.boards)
+  }
+  constructor(private _fb: FormBuilder, private boardService:BoardService) {
     this.boardForm = this._fb.group({
       name: ['', Validators.required],
       columns: this._fb.array([this.addColumnGroup()])
@@ -35,5 +41,9 @@ export class BoardModalComponent {
   }
   onSubmit(): void {
     console.log('submitted form' + JSON.stringify(this.boardForm?.value));
+    this.boards.boards.push(this.boardForm.value)
+    console.log(this.boards.boards)
+    this.boardService.setBoards(this.boards)
+    
   }
 }
