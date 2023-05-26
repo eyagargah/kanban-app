@@ -26,6 +26,11 @@ export class BoardService {
   getBoards() {
     this.boards = JSON.parse(localStorage['boards']);
   }
+
+  setBoard(board:Board){
+    this.boards.boards.push(board)
+  }
+
   setBoards(boards: Boards) {
     localStorage.setItem('boards', JSON.stringify(boards));
   }
