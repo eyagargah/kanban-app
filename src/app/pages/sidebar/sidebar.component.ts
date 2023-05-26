@@ -24,11 +24,11 @@ export class SidebarComponent {
 
   ngOnInit(){
     this.boards = this.boardsService.boards.boards
-    
   }
   
-  getCurrentBoard(e:any){
-    this.currentBoard = e.target.value
+  getCurrentBoard(i:number){
+   console.log(this.boards[i])
+   console.log(typeof(this.boards))
   }
   dropDownMenu() {
     const dropdownMenu = document.querySelector('.dropdownContent');
