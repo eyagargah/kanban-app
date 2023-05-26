@@ -13,6 +13,7 @@ import { BoardService } from 'src/app/services/board.service';
 })
 export class SidebarComponent {
   currentBoard = ''
+  boards:any
   darkModeOn : boolean = false
   addTaskModalDialogRef: MatDialogRef<addTaskModalComponent> | undefined;
   addBoardModalDialogRef: MatDialogRef<BoardModalComponent> | undefined;
@@ -22,9 +23,12 @@ export class SidebarComponent {
   constructor(private dialog: MatDialog, public colorTheme: ColorThemeService , private boardsService : BoardService ) {}
 
   ngOnInit(){
+    this.boards = this.boardsService.boards.boards
+    
   }
+  
   getCurrentBoard(e:any){
-    console.log(e.target)
+    this.currentBoard = e.target.value
   }
   dropDownMenu() {
     const dropdownMenu = document.querySelector('.dropdownContent');
