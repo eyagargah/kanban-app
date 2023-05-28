@@ -1,5 +1,5 @@
 .newBoard {
-    z-index: 1111111;
+    
     width: 400px;
     height: 400px;
     padding: 2rem;
@@ -87,3 +87,10 @@
     }
   }
   
+  .hide {
+    display: none;
+  }
+  .show {
+    z-index: 1111111;
+    display: block;
+  }
