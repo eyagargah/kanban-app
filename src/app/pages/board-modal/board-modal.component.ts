@@ -48,8 +48,7 @@ export class BoardModalComponent {
     this.boards.boards.push(this.boardForm.value)
     console.log(this.boards.boards)
     this.boardService.setBoards(this.boards)
-    this.boardModal?.classList.remove('show')
-    this.boardModal?.classList.add('hide')
     this.dialog.closeAll()
+    window.location.reload()
   }
 }
