@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { BoardService } from 'src/app/services/board.service';
-
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 @Component({
   selector: 'app-board-modal',
   templateUrl: './board-modal.component.html',
@@ -9,12 +9,16 @@ import { BoardService } from 'src/app/services/board.service';
 })
 export class BoardModalComponent {
   boards :any
+  boardModal: any
   public boardForm: FormGroup;
   ngOnInit(){
+    
     this.boards = JSON.parse(localStorage['boards']);
     console.log(this.boards.boards)
+     this.boardModal= document.querySelector('.newBoard')
+
   }
-  constructor(private _fb: FormBuilder, private boardService:BoardService) {
+  constructor(private _fb: FormBuilder, private boardService:BoardService , private dialog : MatDialog) {
     this.boardForm = this._fb.group({
       name: ['', Validators.required],
       columns: this._fb.array([this.addColumnGroup()])
@@ -44,6 +48,8 @@ export class BoardModalComponent {
     this.boards.boards.push(this.boardForm.value)
     console.log(this.boards.boards)
     this.boardService.setBoards(this.boards)
-    
+    this.boardModal?.classList.remove('show')
+    this.boardModal?.classList.add('hide')
+    this.dialog.closeAll()
   }
 }
