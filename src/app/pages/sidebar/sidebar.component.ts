@@ -6,6 +6,7 @@ import { DeleteBoardModalComponent } from '../delete-board-modal/delete-board-mo
 import { BoardModalComponent } from '../board-modal/board-modal.component';
 import { ColorThemeService } from 'src/app/services/color-theme.service';
 import { BoardService } from 'src/app/services/board.service';
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
