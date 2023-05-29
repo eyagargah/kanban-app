@@ -27,6 +27,9 @@ export class BoardService {
     this.boards = JSON.parse(localStorage['boards']);
   }
 
+  getColumn(index:number){
+    return this.boards.boards[index].columns;
+  }
   setBoard(board:Board){
     this.boards.boards.push(board)
   }
