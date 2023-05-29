@@ -14,6 +14,7 @@ import { BoardService } from 'src/app/services/board.service';
 })
 export class SidebarComponent {
   currentBoard = ''
+  columns:any
   boards:any
   darkModeOn : boolean = false
   addTaskModalDialogRef: MatDialogRef<addTaskModalComponent> | undefined;
@@ -28,8 +29,12 @@ export class SidebarComponent {
   }
   
   getCurrentBoard(i:number){
-   console.log(this.boards[i])
-   console.log(typeof(this.boards))
+   console.log(JSON.stringify(this.boards[i].columns))
+   this.currentBoard = this.boards[i].name
+   this.boardsService.currentBoard = this.boards[i]
+   this.columns= this.boardsService.getColumn(i)
+   localStorage.setItem('currentColumns',JSON.stringify(this.columns))
+  
   }
   dropDownMenu() {
     const dropdownMenu = document.querySelector('.dropdownContent');
