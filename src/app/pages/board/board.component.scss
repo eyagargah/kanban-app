@@ -6,6 +6,15 @@
   z-index: 1;
   display: flex;
 
+  .columns {
+    display: flex;
+    .status {
+      font-size: 0.8rem;
+      margin-left: 1rem;
+      color: #828fa3;
+      font-weight: 600;
+  }
+  }
   button {
     margin-left: 1rem;
     margin-top: 1.8rem;
