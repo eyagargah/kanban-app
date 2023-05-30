@@ -29,12 +29,10 @@ export class SidebarComponent {
   }
   
   getCurrentBoard(i:number){
-   console.log(JSON.stringify(this.boards[i].columns))
    this.currentBoard = this.boards[i].name
-   this.boardsService.currentBoard = this.boards[i]
-   this.columns= this.boardsService.getColumn(i)
-   localStorage.setItem('currentColumns',JSON.stringify(this.columns))
-  
+   this.boardsService.setCurrentBoard(this.boardsService.boards.boards[i])
+   this.boardsService.indexes.boardIndex = i
+   console.log(this.boardsService.currentBoard.columns.length)
   }
   dropDownMenu() {
     const dropdownMenu = document.querySelector('.dropdownContent');
