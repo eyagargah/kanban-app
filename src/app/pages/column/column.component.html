@@ -1,19 +1,10 @@
 <div class="column">
-    <ul>
-        <li>
-            <app-task></app-task>
-        </li>
-        <li>
-            <app-task></app-task>
-        </li>
-        <li>
-            <app-task></app-task>
-        </li>
-        <li>
-            <app-task></app-task>
-        </li>
-        <li>
-            <app-task></app-task>
-        </li>
-    </ul>
+  <span [style.background-color]="color"></span>
+  <h2 class="status">{{ columnName }}({{ taskNumber }})</h2>
+  <div>
+    <app-task  *ngFor="let task of tasks; let i= index"
+    [taskIndex]="i"
+    [taskTitle]="task.title"
+    ></app-task>
+  </div>
 </div>
