@@ -16,10 +16,9 @@
           <input
             class="form-control mb-3"
             placeholder="todo"
-            value=""
             formControlName="column"
+            [defaultValue]=''
           />
-
           <img
             src="../../../assets/images/icon-cross.svg"
             (click)="removeColumn(i)"
