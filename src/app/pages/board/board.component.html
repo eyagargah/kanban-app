@@ -5,9 +5,9 @@
   </div>
 
   <div class="boards" *ngIf="this.boardService.currentBoard">
-    <div *ngIf="this.boardService.currentBoard.columns.length == 0">
+    <div *ngIf="this.boardService.currentBoard.columns.length === 0 ">
       <h1>This board is empty. Create a new column to get started.</h1>
-      <button>+ Add New Column</button>
+      <button class="newColumn" (click)="addNewColumn()">+New Column</button>
     </div>
     <app-column *ngFor="let column of this.boardService.currentBoard.columns; let i = index"
     [columnName]="column.name"
