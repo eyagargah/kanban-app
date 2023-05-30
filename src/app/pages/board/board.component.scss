@@ -6,6 +6,9 @@
   z-index: 1;
   display: flex;
 
+  .boards {
+    display: flex;
+  }
   .columns {
     display: flex;
     .status {
