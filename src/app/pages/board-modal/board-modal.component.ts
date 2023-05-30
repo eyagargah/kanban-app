@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { BoardService } from 'src/app/services/board.service';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 @Component({
@@ -12,7 +12,6 @@ export class BoardModalComponent {
   boardModal: any
   public boardForm: FormGroup;
   ngOnInit(){
-    
     this.boards = JSON.parse(localStorage['boards']);
     console.log(this.boards.boards)
      this.boardModal= document.querySelector('.newBoard')
@@ -27,7 +26,7 @@ export class BoardModalComponent {
   //Append Fields Set
   private addColumnGroup(): FormGroup {
     return this._fb.group({
-      column:''
+      column:['',Validators.required]
     });
   }
   //Add Fields
@@ -45,10 +44,10 @@ export class BoardModalComponent {
   }
   onSubmit(): void {
     console.log('submitted form' + JSON.stringify(this.boardForm?.value));
+    console.log(this.columnArray)
     this.boards.boards.push(this.boardForm.value)
     console.log(this.boards.boards)
     this.boardService.setBoards(this.boards)
     this.dialog.closeAll()
-    window.location.reload()
   }
 }
