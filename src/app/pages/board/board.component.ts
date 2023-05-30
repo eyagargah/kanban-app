@@ -9,15 +9,13 @@ import { BoardService } from 'src/app/services/board.service';
   styleUrls: ['./board.component.scss']
 })
 export class BoardComponent {
- columns: any
  colors=["#49C4E5","#8471F2","#67E2AE","#d6d45a","#e09660","#e0635e","#de5fc7","#5d64de"]
-  constructor(private dialog: MatDialog , public boardService : BoardService) {}
-  fileNameDialogRef: MatDialogRef<EditBoardModalComponent> | undefined;
-  ngOnInit(){
-    this.columns= JSON.parse(localStorage.getItem('currentColumns') || '{}') 
-    console.log(this.columns)
+
+  constructor(private dialog: MatDialog , public boardService : BoardService) {
     
   }
+  fileNameDialogRef: MatDialogRef<EditBoardModalComponent> | undefined;
+  
   addNewColumn(){
     this.fileNameDialogRef = this.dialog.open(EditBoardModalComponent);
   }
