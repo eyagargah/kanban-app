@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { ViewtaskModalComponent } from '../viewtask-modal/viewtask-modal.component';
 
@@ -10,6 +10,8 @@ import { ViewtaskModalComponent } from '../viewtask-modal/viewtask-modal.compone
 export class TaskComponent {
   showViewTaskModalDialogRef: MatDialogRef<ViewtaskModalComponent> | undefined;
 
+  @Input() taskIndex: any
+  @Input() taskTitle: any
   constructor(private dialog:MatDialog){}
   showTask(e:any){
     console.log(e.target)
