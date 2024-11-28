@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-delete-board-modal',
@@ -7,12 +8,13 @@ import { Component } from '@angular/core';
 })
 export class DeleteBoardModalComponent {
 
+  constructor( private dialog : MatDialog){}
   deleteBoard(){
 
   }
 
   CancelAction(){
     console.log("Cancel Action");
-    
+
   }
 }
