@@ -10,7 +10,7 @@
       <img *ngIf="!colorTheme.darkMode" src="../../../assets/images/logo-dark.svg" class="logo">
       <img *ngIf="colorTheme.darkMode" src="../../../assets/images/logo-light.svg" class="logo">
       <div class="boards">
-        <h4>All Boards( {{boards.length}})</h4>
+        <h4>All Boards( {{boards.length}} )</h4>
         <div class="boardsList">
           <button class="boardName" (click)="getCurrentBoard(i)" *ngFor="let board of boards ; let i=index">
             <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg">
