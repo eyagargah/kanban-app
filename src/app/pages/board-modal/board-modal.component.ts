@@ -20,7 +20,7 @@ export class BoardModalComponent {
   constructor(private _fb: FormBuilder, private boardService:BoardService , private dialog : MatDialog) {
     this.boardForm = this._fb.group({
       name: ['', Validators.required],
-      columns: this._fb.array([this.addColumnGroup()])
+      tasks: this._fb.array([this.addTaskGroup()])
     });
   }
   //Append Fields Set
