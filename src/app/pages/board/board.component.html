@@ -1,5 +1,8 @@
 <div class="board">
-  <div class="emptyBoard" *ngIf="this.boardService.currentBoard.columns.length === 0">
+  <div
+    class="emptyBoard"
+    *ngIf="this.boardService.currentBoard.columns.length === 0"
+  >
     <h1>There are no boards. Create a new board to get started.</h1>
     <button>+ Add New Board</button>
   </div>
@@ -7,19 +10,22 @@
   <div class="boards" *ngIf="this.boardService.currentBoard">
     <div *ngIf="this.boardService.currentBoard.columns.length === 1">
       <h1>This board is empty. Create a new column to get started.</h1>
+      <button (click)="addNewColumn()">+New Column</button>
     </div>
 
-    <app-column
-      *ngFor="
-        let column of this.boardService.currentBoard.columns;
-        let i = index
-      "
-      [columnName]="column.name"
-      [taskNumber]="column.tasks.length"
-      [tasks]="column.tasks"
-      [color]="colors[i]"
-      [columnIndex]="i"
-    ></app-column>
-    <button class="newColumn" (click)="addNewColumn()">+New Column</button>
+    <div class="columns" *ngIf="this.boardService.currentBoard.columns.length > 1">
+      <app-column
+        *ngFor="
+          let column of this.boardService.currentBoard.columns;
+          let i = index
+        "
+        [columnName]="column.name"
+        [taskNumber]="column.tasks.length"
+        [tasks]="column.tasks"
+        [color]="colors[i]"
+        [columnIndex]="i"
+      ></app-column>
+      <button class="newColumn" (click)="addNewColumn()">+New Column</button>
+    </div>
   </div>
 </div>
