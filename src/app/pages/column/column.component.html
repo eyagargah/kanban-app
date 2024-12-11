@@ -1,6 +1,6 @@
 <div class="column">
   <span [style.background-color]="color"></span>
-  <h2 class="status">{{ columnName }}({{ taskNumber }})</h2>
+  <h2 class="status">{{ columnName }} ( {{ taskNumber }} )</h2>
   <div>
     <app-task  *ngFor="let task of tasks; let i= index"
     [taskIndex]="i"
