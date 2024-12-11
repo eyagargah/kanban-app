@@ -29,6 +29,12 @@ export class BoardModalComponent {
       column:['',Validators.required]
     });
   }
+
+  private addTaskGroup(): FormGroup {
+    return this._fb.group({
+      Task:['',Validators.required]
+    });
+  }
   //Add Fields
   addColumn(): void {
     this.columnArray.push(this.addColumnGroup());
