@@ -14,7 +14,7 @@ export class BoardModalComponent {
   ngOnInit(){
     this.boards = JSON.parse(localStorage['boards']);
     console.log(this.boards.boards)
-     this.boardModal= document.querySelector('.newBoard')
+    this.boardModal= document.querySelector('.newBoard')
 
   }
   constructor(private _fb: FormBuilder, private boardService:BoardService , private dialog : MatDialog) {
