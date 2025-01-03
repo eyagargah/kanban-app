@@ -32,7 +32,7 @@ export class SidebarComponent {
    this.currentBoard = this.boards[i].name
    this.boardsService.setCurrentBoard(this.boardsService.boards.boards[i])
    this.boardsService.indexes.boardIndex = i
-   console.log(this.boardsService.boards.boards[i].columns)
+   console.log(this.boardsService.boards.boards[i])
   }
   dropDownMenu() {
     const dropdownMenu = document.querySelector('.dropdownContent');
